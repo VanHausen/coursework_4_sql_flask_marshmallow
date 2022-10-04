@@ -22,16 +22,16 @@ class UsersService(BaseService):
         users = UserDAO(self._db_session).get_all()
         return UserSchema(many=True).dump(users)
 
-    def create(self, new_pd):
-        user_password = new_pd.get("password")
+    def create(self, user_d):
+        user_password = user_d.get("password")
         if user_password:
-            new_pd["password"] = generate_password_digest(user_password)
+            user_d["password"] = generate_password_digest(user_password)
         user = UserDAO(self._db_session).create(user_password)
-        return UserSchema(many=True).dump(user)
+        return UserSchema(many=True).dump(user_d)
 
-    def update(self, new_pd):
-        user = UserDAO(self._db_session).update(new_pd)
-        return UserSchema().dump(user)
+    # def create(self, new_pd):
+    #     new_pd["password"] = self.make_user_password_hash(new_pd.get("password"))
+    #     return self.dao.create(new_pd)
 
 
     def update_password(self, new_pd):
