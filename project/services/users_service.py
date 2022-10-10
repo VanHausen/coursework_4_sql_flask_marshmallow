@@ -39,4 +39,3 @@ class UsersService(BaseService):
         user_password_2 = new_pd.get("password_2")
 
 
-

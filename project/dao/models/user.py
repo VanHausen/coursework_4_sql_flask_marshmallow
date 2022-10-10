@@ -21,3 +21,4 @@ class User(BaseMixin, db.Model):
     #
     # def get_password_hash(password):
     #     return base64.b64encode(password.get_password(password)).decode('utf-8')
+

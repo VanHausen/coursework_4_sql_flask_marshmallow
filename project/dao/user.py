@@ -18,8 +18,8 @@ class UserDAO:
 
     def create(self, user_d):
         ent = User(**user_d)
-        self._db_session.add(ent)
-        self._db_session.commit()
+        self.session.add(ent)
+        self.session.commit()
         return ent
 
 

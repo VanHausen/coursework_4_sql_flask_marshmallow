@@ -27,7 +27,6 @@ def register_extensions(app):
     api.add_namespace(auth_ns)
 
 app = create_app(DevelopmentConfig)
-#app.debug(True)
 
 
 @app.shell_context_processor
@@ -35,9 +34,9 @@ def shell():
     return {
         "db": db,
         "Genre": Genre,
-        "User": User,
         "Director": Director,
         "Movie": Movie,
+        "User": User
     }
 
 
