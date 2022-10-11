@@ -23,19 +23,19 @@ class UserDAO:
         return ent
 
 
-    def update(self, user_d):
-        user = self.get_by_id(user_d.get('id'))
+    def update(self, new_pd):
+        user = self.get_by_id(new_pd.get('id'))
         if user:
-            if user_d.get('password'):
-                user.password = user_d.get('password')
-            if user_d.get('email'):
-                user.email = user_d.get('email')
-            if user_d.get('name'):
-                user.name = user_d.get('name')
-            if user_d.get('surname'):
-                user.surname = user_d.get('surname')
-            if user_d.get('favorite_genre'):
-                user.favorite_genre = user_d.get('favorite_genre')
+            if new_pd.get('password'):
+                user.password = new_pd.get('password')
+            if new_pd.get('email'):
+                user.email = new_pd.get('email')
+            if new_pd.get('name'):
+                user.name = new_pd.get('name')
+            if new_pd.get('surname'):
+                user.surname = new_pd.get('surname')
+            if new_pd.get('favorite_genre'):
+                user.favorite_genre = new_pd.get('favorite_genre')
 
         self._db_session.add(user)
         self._db_session.commit()

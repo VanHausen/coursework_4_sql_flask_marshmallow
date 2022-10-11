@@ -29,10 +29,6 @@ class UsersService(BaseService):
         user = UserDAO(self._db_session).create(user_d)
         return UserSchema(many=True).dump(user)
 
-    # def create(self, new_pd):
-    #     new_pd["password"] = self.make_user_password_hash(new_pd.get("password"))
-    #     return self.dao.create(new_pd)
-
 
     def update_password(self, new_pd):
         user_password_1 = new_pd.get("password_1")
