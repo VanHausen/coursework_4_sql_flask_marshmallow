@@ -15,21 +15,21 @@ api = Api(title="Flask Course Project 4", doc="/docs")
 # def create_app(Config):
 #     app = Flask(__name__)
 #     app.config.from_object(Config)
-
-    # @app.route('/')
-    # def index():
-    #     return render_template('index.html')
-    #
-    # db.init_app(app)
-    # api.init_app(app)
-    #
-    # api.add_namespace(directors_ns)
-    # api.add_namespace(genres_ns)
-    # api.add_namespace(users_ns)
-    # api.add_namespace(movies_ns)
-    # api.add_namespace(auth_ns)
-    #
-    # return app
+#
+#     @app.route('/')
+#     def index():
+#         return render_template('index.html')
+#
+#     db.init_app(app)
+#     api.init_app(app)
+#
+#     api.add_namespace(directors_ns)
+#     api.add_namespace(genres_ns)
+#     api.add_namespace(users_ns)
+#     api.add_namespace(movies_ns)
+#     api.add_namespace(auth_ns)
+#
+#     return app
 
 
 

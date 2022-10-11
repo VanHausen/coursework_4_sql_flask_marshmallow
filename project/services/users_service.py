@@ -26,7 +26,7 @@ class UsersService(BaseService):
         user_password = user_d.get("password")
         if user_password:
             user_d["password"] = generate_password_digest(user_password)
-        user = UserDAO(self._db_session).create(user_password)
+        user = UserDAO(self._db_session).create(user_d)
         return UserSchema(many=True).dump(user)
 
     # def create(self, new_pd):

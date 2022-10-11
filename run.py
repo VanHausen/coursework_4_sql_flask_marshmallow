@@ -41,4 +41,4 @@ def shell():
 
 
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run(host="localhost", port=10001, debug=True)
